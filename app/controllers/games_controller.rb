@@ -32,12 +32,12 @@ class GamesController < ApplicationController
   def scissors
     @comp_move = ["rock","paper","scissors"].sample
     if @comp_move == "rock"
-      @outcome = "won"
-    elsif @comp_move == "paper"
-      @outcome = "tied"
-    else 
       @outcome = "lost"
-    end    
+    elsif @comp_move == "paper"
+      @outcome = "won"
+    else 
+      @outcome = "tied"
+    end
     render ({:template => "game_templates/scissors"})
   end
 
